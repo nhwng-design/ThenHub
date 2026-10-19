@@ -1,0 +1,335 @@
+﻿/* ==============================================================
+   1. THỪA HƯỞNG STYLE CHUNG TỪ FILE TRANG CHỦ
+   ============================================================== */
+@import url('./style.css');
+
+/* ==============================================================
+   2. BỐ CỤC ĐẶC THÙ CHO TRANG THEN & XỨ LẠNG (PAGE 5)
+   ============================================================== */
+
+/* Hero Banner dạng Biên Cương */
+.xulang-hero {
+    background-color: var(--bg-card);
+    border-left: 5px solid var(--color-gold);
+    border-radius: var(--border-radius);
+    padding: 40px 45px;
+    margin-bottom: var(--section-gap);
+}
+
+.hero-badge {
+    color: var(--color-gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.xulang-hero h1 {
+    font-family: 'Be Vietnam Pro', var(--font-title) !important;
+    font-size: 34px;
+    color: var(--color-green);
+    margin-bottom: 14px;
+}
+
+.hero-desc {
+    font-size: 15px;
+    color: var(--text-gray);
+    line-height: 1.7;
+    max-width: 880px;
+}
+
+/* --------------------------------------------------------------
+   KHỐI METRICS DASHBOARD (4 CON SỐ DI SẢN)
+   -------------------------------------------------------------- */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.metric-card {
+    background-color: #FFFFFF;
+    border: 1px solid #EAE0D5;
+    border-radius: var(--border-radius);
+    padding: 24px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease;
+}
+
+    .metric-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--color-gold);
+    }
+
+.metric-num {
+    font-family: 'Be Vietnam Pro', var(--font-title) !important;
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--color-gold);
+    line-height: 1.1;
+    margin-bottom: 8px;
+}
+
+.metric-label {
+    font-size: 13px;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+/* --------------------------------------------------------------
+   KHỐI BẢN ĐỒ BẢN SẮC 11 HUYỆN THỊ (DISTRICT GRID)
+   -------------------------------------------------------------- */
+.district-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.district-card {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 22px;
+    border-top: 4px solid var(--color-green);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+    .district-card:hover {
+        box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        transform: translateY(-3px);
+    }
+
+    .district-card.highlight-city {
+        border-top-color: var(--color-gold);
+        background-color: #FAF6F0;
+    }
+
+.district-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.district-code {
+    font-family: 'Be Vietnam Pro', var(--font-title) !important;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--color-gold);
+}
+
+.district-header h3 {
+    font-family: 'Be Vietnam Pro', var(--font-title) !important;
+    font-size: 18px;
+    color: var(--color-green);
+    margin: 0;
+}
+
+.district-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-green);
+    background-color: #E2EDE7;
+    padding: 3px 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+.district-desc {
+    font-size: 13px;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.district-footer {
+    font-size: 11px;
+    color: var(--text-gray);
+    font-weight: 600;
+    border-top: 1px dashed #E5DCCF;
+    padding-top: 10px;
+}
+
+/* --------------------------------------------------------------
+   KHỐI KÝ SỰ HERITAGE SHOWCASE (2 BÀI BÁO LỚN TRẢI RỘNG)
+   -------------------------------------------------------------- */
+.heritage-showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.heritage-feature-card {
+    background-color: #FFFFFF;
+    border-radius: var(--border-radius);
+    border: 1px solid #EAE0D5;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-img-wrap {
+    position: relative;
+    height: 220px;
+}
+
+    .feature-img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0;
+    }
+
+.feature-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background-color: var(--color-gold);
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 12px;
+}
+
+.feature-content {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+    .feature-content h3 {
+        font-family: 'Be Vietnam Pro', var(--font-title) !important;
+        font-size: 20px;
+        color: var(--color-green);
+        margin-bottom: 10px;
+        line-height: 1.3;
+    }
+
+    .feature-content p {
+        font-size: 13px;
+        color: var(--text-gray);
+        line-height: 1.6;
+        margin-bottom: 16px;
+    }
+
+.feature-tags {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+}
+
+    .feature-tags span {
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--color-green);
+        background-color: #F4EFE6;
+        padding: 4px 10px;
+        border-radius: 12px;
+    }
+
+/* --------------------------------------------------------------
+   KHỐI PRESERVATION NETWORK (HÀNH ĐỘNG BẢO TỒN - EDITORIAL STYLE)
+   -------------------------------------------------------------- */
+.preservation-box {
+    background-color: var(--color-green);
+    color: #FFFFFF;
+    border-radius: var(--border-radius);
+    padding: 45px 40px;
+    margin-bottom: var(--section-gap);
+    box-shadow: 0 10px 30px rgba(31, 75, 55, 0.2);
+}
+
+.preservation-header {
+    margin-bottom: 32px;
+}
+
+    .preservation-header h2 {
+        font-family: 'Be Vietnam Pro', var(--font-title) !important;
+        font-size: 30px;
+        margin-top: 6px;
+        font-weight: 700;
+    }
+
+.preservation-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.step-card {
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 3px solid var(--color-gold); /* Điểm nhấn đường kẻ vàng kim phía trên */
+    border-radius: var(--border-radius);
+    padding: 26px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+    .step-card:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: translateY(-4px);
+    }
+
+.step-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.step-num {
+    font-family: 'Be Vietnam Pro', var(--font-title) !important;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--color-gold);
+    line-height: 1;
+}
+
+.step-badge {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--color-gold);
+    background-color: rgba(198, 140, 50, 0.15);
+    padding: 4px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(198, 140, 50, 0.3);
+}
+
+.step-card h4 {
+    font-family: 'Be Vietnam Pro', var(--font-title) !important;
+    font-size: 18px;
+    color: #FFFFFF !important;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.step-card p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.step-metric {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-gold);
+    border-top: 1px dashed rgba(255, 255, 255, 0.15);
+    padding-top: 12px;
+    margin-top: auto;
+}
+/* Ép font Be Vietnam Pro toàn bộ tiêu đề trang xulang */
+h1, h2, h3, h4, .section-title {
+    font-family: 'Be Vietnam Pro', var(--font-title) !important;
+}

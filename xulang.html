@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Then & Xứ Lạng - ThenHub</title>
+    <!-- Kết nối file CSS dùng chung và file CSS riêng của trang Xứ Lạng -->
+    <link rel="stylesheet" href="./style.css?v=3" />
+    <link rel="stylesheet" href="./xulang.css?v=3" />
+</head>
+<body>
+    <!-- SIDEBAR BÊN TRÁI -->
+    <aside class="sidebar">
+        <a href="index.html" class="logo">
+            <img src="./icons/logoThenHub.png" alt="ThenHub Logo">
+        </a>
+        <nav>
+            <a href="index.html" class="menu-item">Trang chủ</a>
+            <a href="disan.html" class="menu-item">Di sản hát Then</a>
+            <a href="chuyenthen.html" class="menu-item">Chuyện Then</a>
+            <a href="tulieu.html" class="menu-item">Âm sắc & Tư liệu</a>
+            <a href="xulang.html" class="menu-item active">Then & Xứ Lạng</a>
+        </nav>
+    </aside>
+
+    <!-- NỘI DUNG CHÍNH BÊN PHẢI -->
+    <main class="main-content">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header-links">
+                <a href="#" style="color: var(--color-gold); font-style: italic;">Hơi Thở Biên Cương</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 16px;">
+                <div class="header-links">
+                    <a href="#">Về ThenHub</a>
+                    <a href="#">Liên hệ</a>
+                </div>
+                <div class="search-bar">
+                    <img src="./icons/icon_timkiem.png" alt="Search" style="width: 18px; height: 18px;">
+                    <input type="text" placeholder="Tìm kiếm 11 huyện thị, nghệ nhân, địa danh...">
+                </div>
+                <button style="background: none; border: 1px solid #ccc; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                    <img src="./icons/icon_loa.png" alt="Audio" style="width: 20px; height: 20px;">
+                </button>
+            </div>
+        </header>
+
+        <div class="container">
+
+            <!-- KHỐI 1: HERO TRANG THEN & XỨ LẠNG -->
+            <section class="xulang-hero">
+                <div class="hero-badge">ĐỊA LÝ DI SẢN & BẢN SẮC CỘNG ĐỒNG</div>
+                <h1>Then & Xứ Lạng: Hành Trình 11 Huyện Thị Biên Cương</h1>
+                <p class="hero-desc">
+                    Trải dài từ lòng chảo Thất Khê, thung lũng Bắc Sơn, Bình Gia đến dải đất biên giới Cao Lộc, Lộc Bình, nghệ thuật Hát Then – Đàn Tính là sợi dây văn hóa kết nối cộng đồng Tày - Nùng trên khắp 11 huyện thị tỉnh Lạng Sơn.
+                </p>
+            </section>
+
+            <!-- KHỐI 2: BẢNG CHỈ SỐ BẢO TỒN DI SẢN (METRICS DASHBOARD) -->
+            <section style="margin-bottom: var(--section-gap);">
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-num">11/11</div>
+                        <div class="metric-label">Huyện & Thành phố bao phủ di sản</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-num">375+</div>
+                        <div class="metric-label">Nghệ nhân lưu giữ làn điệu cổ</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-num">65+</div>
+                        <div class="metric-label">Câu lạc bộ Hát Then - Đàn Tính</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-num">79,2%</div>
+                        <div class="metric-label">Tỷ lệ đồng bào Tày - Nùng Xứ Lạng</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KHỐI 3: BẢN ĐỒ VÀ BẢN SẮC 11 HUYỆN THỊ (11-DISTRICT GRID) -->
+            <section style="margin-bottom: var(--section-gap);">
+                <div class="section-subtitle">BẢN ĐỒ VĂN HÓA</div>
+                <h2 class="section-title">Nét Đặc Trưng Then Trên 11 Vùng Đất Lạng Sơn</h2>
+
+                <div class="district-grid">
+                    <!-- 1. Tràng Định -->
+                    <div class="district-card">
+                        <div class="district-header">
+                            <span class="district-code">01</span>
+                            <h3>Huyện Tràng Định</h3>
+                        </div>
+                        <span class="district-tag">Lòng chảo Thất Khê</span>
+                        <p class="district-desc">Nổi tiếng với các làn điệu "Suôi lừa", "Đàn khách", "Khẩu tu vua" và trường ca "Khảm Hải" vượt biển hào hùng.</p>
+                        <div class="district-footer">📍 Địa danh: Thất Khê, Đề Thám, Cốc Tảo</div>
+                    </div>
+
+                    <!-- 2. Bình Gia -->
+                    <div class="district-card">
+                        <div class="district-header">
+                            <span class="district-code">02</span>
+                            <h3>Huyện Bình Gia</h3>
+                        </div>
+                        <span class="district-tag">Thung lũng đá vôi</span>
+                        <p class="district-desc">Cội nguồn làn điệu "Khao sluông" mừng bản làng, điệu "Bến thuông" và là quê hương của nhiều nghệ nhân ưu tú.</p>
+                        <div class="district-footer">📍 Địa danh: Nà Bưa, Tô Hiệu, Pác Sào</div>
+                    </div>
+
+                    <!-- 3. Bắc Sơn -->
+                    <div class="district-card">
+                        <div class="district-header">
+                            <span class="district-code">03</span>
+                            <h3>Huyện Bắc Sơn</h3>
+                        </div>
+                        <span class="district-tag">Thung lũng vàng lúa chín</span>
+                        <p class="district-desc">Phong trào Then lời mới phát triển mạnh mẽ, giai điệu mượt mà hòa cùng âm hưởng núi rừng di tích lịch sử.</p>
+                        <div class="district-footer">📍 Địa danh: Trấn Yên, Vũ Sơn, Nà Rộng</div>
+                    </div>
+
+                    <!-- 4. Văn Quan -->
+                    <div class="district-card">
+                        <div class="district-header">
+                            <span class="district-code">04</span>
+                            <h3>Huyện Văn Quan</h3>
+                        </div>
+                        <span class="district-tag">Cái nôi đẽo Đàn Tính</span>
+                        <p class="district-desc">Nơi lưu giữ làng nghề gia công cây đàn Tính gỗ xoan, quả bầu khô truyền thống cùng điệu "Pây tàng" dồn dập.</p>
+                        <div class="district-footer">📍 Địa danh: Đại An, Tích Hữu, Pá Tuồng</div>
+                    </div>
+
+                    <!-- 5. Văn Lãng -->
+                    <div class="district-card">
+                        <div class="district-header">
+                            <span class="district-code">05</span>
+                            <h3>Huyện Văn Lãng</h3>
+                        </div>
+                        <span class="district-tag">Biên giáp sông Kỳ Cùng</span>
+                        <p class="district-desc">Phong trào sinh hoạt câu lạc bộ Then sôi nổi nhất tỉnh với sự tham gia nhiệt tình của thanh thiếu niên vùng cao.</p>
+                        <div class="district-footer">📍 Địa danh: Hoàng Việt, Bản Lẻ, Na Hình</div>
+                    </div>
+
+                    <!-- 6. Cao Lộc -->
+                    <div class="district-card">
+                        <div class="district-header">
+                            <span class="district-code">06</span>
+                            <h3>Huyện Cao Lộc</h3>
+                        </div>
+                        <span class="district-tag">Cửa khâu biên giới</span>
+                        <p class="district-desc">Đặc trưng Then Nùng với nhịp điệu nhanh, khỏe khoắn, phong cách biểu diễn dứt khoát giàu sức sống.</p>
+                        <div class="district-footer">📍 Địa danh: Hợp Thành, Đồng Đăng, Kéo Tào</div>
+                    </div>
+
+                    <!-- 7. Lộc Bình -->
+                    <div class="district-card">
+                        <div class="district-header">
+                            <span class="district-code">07</span>
+                            <h3>Huyện Lộc Bình</h3>
+                        </div>
+                        <span class="district-tag">Chân núi Mẫu Sơn</span>
+                        <p class="district-desc">Nơi làn điệu Then quyện trong không gian sương mờ núi cao, ngợi ca thiên nhiên và tình yêu đôi lứa.</p>
+                        <div class="district-footer">📍 Địa danh: Khuất Xá, Bản Chu, Bản Cảng</div>
+                    </div>
+
+                    <!-- 8. Chi Lăng -->
+                    <div class="district-card">
+                        <div class="district-header">
+                            <span class="district-code">08</span>
+                            <h3>Huyện Chi Lăng</h3>
+                        </div>
+                        <span class="district-tag">Ải Chi Lăng lịch sử</span>
+                        <p class="district-desc">Sự giao thoa độc đáo giữa thơ ca dân gian Tày - Nùng và tinh thần tự hào quê hương Xứ Lạng.</p>
+                        <div class="district-footer">📍 Địa danh: Quan Sơn, Hòa Bình, Đông Mồ</div>
+                    </div>
+
+                    <!-- 9. Đình Lập -->
+                    <div class="district-card">
+                        <div class="district-header">
+                            <span class="district-code">09</span>
+                            <h3>Huyện Đình Lập</h3>
+                        </div>
+                        <span class="district-tag">Vùng đồi chè đông nam</span>
+                        <p class="district-desc">Giao lưu làn điệu Then Tày với nghệ thuật dân gian truyền thống của các dân tộc anh em lân cận.</p>
+                        <div class="district-footer">📍 Địa danh: Đình Lập, Kéo Khuế, Bình Chương</div>
+                    </div>
+
+                    <!-- 10. Hữu Lũng -->
+                    <div class="district-card">
+                        <div class="district-header">
+                            <span class="district-code">10</span>
+                            <h3>Huyện Hữu Lũng</h3>
+                        </div>
+                        <span class="district-tag">Cửa ngõ phía Nam</span>
+                        <p class="district-desc">Nơi tổ chức nhiều ngày hội giao lưu dân ca, đưa làn điệu Then tiếp cận với du khách thập phương.</p>
+                        <div class="district-footer">📍 Địa danh: Hòa Lạc, Tắng Mật, TT. Hữu Lũng</div>
+                    </div>
+
+                    <!-- 11. TP. Lạng Sơn -->
+                    <div class="district-card highlight-city">
+                        <div class="district-header">
+                            <span class="district-code">11</span>
+                            <h3>Thành phố Lạng Sơn</h3>
+                        </div>
+                        <span class="district-tag">Trung tâm kết nối di sản</span>
+                        <p class="district-desc">Trọng điểm sân khấu hóa nghệ thuật Then, nơi quy tụ các liên hoan Hát Then – Đàn Tính cấp tỉnh và quốc gia.</p>
+                        <div class="district-footer">📍 Địa danh: Vĩnh Trại, Chi Lăng, Lê Đại Hành</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KHỐI 4: KÝ SỰ LỄ HỘI MÙA XUÂN & DU LỊCH DI SẢN (HERITAGE SHOWCASE) -->
+            <section style="margin-bottom: var(--section-gap);">
+                <div class="section-subtitle">NHỊP SỐNG CỘNG ĐỒNG</div>
+                <h2 class="section-title">Then Trong Không Gian Lễ Hội & Du Lịch Xứ Lạng</h2>
+
+                <div class="heritage-showcase-grid">
+                    <div class="heritage-feature-card">
+                        <div class="feature-img-wrap">
+                            <img src="./images/le_hoi.png" alt="Hội xuân Lạng Sơn">
+                            <span class="feature-badge">LỄ HỘI MÙA XUÂN</span>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Trẩy Hội Mùa Xuân & Tiếng Đàn Tính Rộn Rã Bản Làng</h3>
+                            <p>
+                                Mỗi độ xuân về trên dải đất Lạng Sơn, khắp các bản làng Tày - Nùng lại rộn ràng tiếng đàn Tính và chùm xóc nhạc. Không còn gò bó trong không gian nhỏ, Then hòa vào các hội Lồng Lồng (Hội xuống đồng), hội đình, hội chùa, trở thành tâm điểm kết nối tình đoàn kết xóm làng và thu hút hàng ngàn du khách trải nghiệm.
+                            </p>
+                            <div class="feature-tags">
+                                <span>#HộiLồngLồng</span>
+                                <span>#VănHóaDânGian</span>
+                                <span>#BiênCươngXuân</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="heritage-feature-card">
+                        <div class="feature-img-wrap">
+                            <img src="./images/dulich_hatthen.png" alt="Đưa Then vào du lịch">
+                            <span class="feature-badge">DU LỊCH DI SẢN</span>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Trải Nghiệm Hát Then Tại Các Điểm Du Lịch Cộng Đồng</h3>
+                            <p>
+                                Gắn liền với định hướng phát triển Công viên Địa chất Lạng Sơn và du lịch sinh thái Mẫu Sơn, Bắc Sơn, các đội văn nghệ Hát Then đã trở thành những "sứ giả văn hóa". Du khách được lắng nghe nghệ nhân biểu diễn trực tiếp dưới mái nhà sàn truyền thống, thưởng thức ẩm thực vùng cao và giao lưu tiếng đàn.
+                            </p>
+                            <div class="feature-tags">
+                                <span>#DuLịchCộngĐồng</span>
+                                <span>#MẫuSơn</span>
+                                <span>#BắcSơn</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KHỐI 5: MẠNG LƯỚI BẢO TỒN THẾ HỆ TRẺ (PRESERVATION NETWORK) -->
+            <section class="preservation-box">
+                <div class="preservation-header">
+                    <div class="section-subtitle" style="color: var(--color-gold);">HÀNH ĐỘNG BẢO TỒN</div>
+                    <h2 style="color: #FFFFFF;">Trao Truyền Di Sản Cho Thế Hệ Tương Lai</h2>
+                    <p style="color: rgba(255,255,255,0.85); max-width: 800px; margin-top: 10px; font-size: 14px; line-height: 1.6;">
+                        Đề án "Bảo tồn và phát huy giá trị di sản Hát Then – Đàn Tính tỉnh Lạng Sơn" do Sở Văn hóa, Thể thao và Du lịch triển khai đã phủ sóng khắp 11 huyện thị, đưa Then vào trường học và thành lập mạng lưới câu lạc bộ thế hệ trẻ.
+                    </p>
+                </div>
+
+                <div class="preservation-steps">
+                    <!-- THẺ 1 -->
+                    <div class="step-card">
+                        <div class="step-card-header">
+                            <span class="step-num">01</span>
+                            <span class="step-badge">GIÁO DỤC DI SẢN</span>
+                        </div>
+                        <h4>Gieo Mầm Then Trong Học Đường</h4>
+                        <p>Đưa tiếng đàn Tính vào tiết học ngoại khóa tại các trường THCS, THPT. Hơn 1.400 học sinh tại Bắc Sơn, Văn Quan, Tràng Định được chính các nghệ nhân ưu tú trực tiếp truyền dạy.</p>
+                        <div class="step-metric">✦ 65+ Câu lạc bộ trường học</div>
+                    </div>
+
+                    <!-- THẺ 2 -->
+                    <div class="step-card">
+                        <div class="step-card-header">
+                            <span class="step-num">02</span>
+                            <span class="step-badge">LÀNG NGHỀ TRUYỀN THỐNG</span>
+                        </div>
+                        <h4>Gia Công Đàn Tính Thủ Công</h4>
+                        <p>Mở rộng các xưởng đẽo cần đàn gỗ xoan và chọn bầu khô tại huyện Văn Quan. Bảo tồn quy trình chế tác thủ công khắt khe, tạo sinh kế bền vững cho các nghệ nhân làm đàn.</p>
+                        <div class="step-metric">✦ 100% Chế tác thủ công</div>
+                    </div>
+
+                    <!-- THẺ 3 -->
+                    <div class="step-card">
+                        <div class="step-card-header">
+                            <span class="step-num">03</span>
+                            <span class="step-badge">CÔNG NGHỆ & TƯ LIỆU</span>
+                        </div>
+                        <h4>Số Hóa & Triển Lãm Số</h4>
+                        <p>Sưu tầm, ký âm và ghi hình tư liệu của 375+ nghệ nhân trên toàn tỉnh. Xây dựng hệ thống lưu trữ điện tử ThenHub giúp thế hệ trẻ dễ dàng tiếp cận mọi lúc mọi nơi.</p>
+                        <div class="step-metric">✦ 375+ Hồ sơ nghệ nhân</div>
+                    </div>
+                </div>
+            </section>
+        </div> 
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div>
+                <a href="index.html" class="footer-logo">
+                    <img src="./icons/logoThenHub.png" alt="ThenHub Logo">
+                </a>
+                <p>"Nền tảng số hóa, lưu giữ và lan tỏa di sản nghệ thuật Hát Then - Đàn Tính dân tộc Tày, Nùng tỉnh Lạng Sơn."</p>
+                <div class="badge">🏆 UNESCO 2019 • Di sản Văn hóa Phi vật thể</div>
+            </div>
+            <div>
+                <h4>Danh mục</h4>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="disan.html">Di sản Hát Then</a></li>
+                    <li><a href="chuyenthen.html">Chuyện Then</a></li>
+                    <li><a href="tulieu.html">Âm sắc & Tư liệu</a></li>
+                    <li><a href="xulang.html">Then & Xứ Lạng</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Tri thức di sản</h4>
+                <ul>
+                    <li><a href="#">Nhạc cụ Đàn Tính</a></li>
+                    <li><a href="#">Thơ ca & Làn điệu cổ</a></li>
+                    <li><a href="#">Danh sách Nghệ nhân</a></li>
+                    <li><a href="#">Bản đồ 11 Huyện thị</a></li>
+                    <li><a href="#">Đưa Then vào học đường</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Đơn vị đồng hành</h4>
+                <p style="margin-bottom: 12px; opacity: 1;">Sở Văn hóa, Thể thao và Du lịch tỉnh Lạng Sơn</p>
+                <p style="margin-bottom: 12px; opacity: 1;">Email: contact@thenhub.vn</p>
+                <p style="opacity: 1;">Địa chỉ: TP. Lạng Sơn, Tỉnh Lạng Sơn</p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

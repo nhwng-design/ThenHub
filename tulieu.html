@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Âm sắc & Tư liệu - ThenHub</title>
+    <!-- Kết nối file CSS riêng của Trang 4 -->
+    <link rel="stylesheet" href="./tulieu.css" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <!-- SIDEBAR BÊN TRÁI -->
+    <aside class="sidebar">
+        <a href="index.html" class="logo">
+            <img src="./icons/logoThenHub.png" alt="ThenHub Logo">
+        </a>
+        <nav>
+            <a href="index.html" class="menu-item">Trang chủ</a>
+            <a href="disan.html" class="menu-item">Di sản hát Then</a>
+            <a href="chuyenthen.html" class="menu-item">Chuyện Then</a>
+            <a href="tulieu.html" class="menu-item active">Âm sắc & Tư liệu</a>
+            <a href="xulang.html" class="menu-item">Then & Xứ Lạng</a>
+        </nav>
+    </aside>
+
+    <!-- NỘI DUNG CHÍNH BÊN PHẢI -->
+    <main class="main-content">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header-links">
+                <a href="#" style="color: var(--color-gold); font-style: italic;">Hơi Thở Biên Cương</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 16px;">
+                <div class="header-links">
+                    <a href="#">Về ThenHub</a>
+                    <a href="#">Liên hệ</a>
+                </div>
+                <div class="search-bar">
+                    <img src="./icons/icon_timkiem.png" alt="Search" style="width: 18px; height: 18px;">
+                    <input type="text" placeholder="Tìm làn điệu, âm thanh, tài liệu sách...">
+                </div>
+                <button style="background: none; border: 1px solid #ccc; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                    <img src="./icons/icon_loa.png" alt="Audio" style="width: 20px; height: 20px;">
+                </button>
+            </div>
+        </header>
+
+        <div class="container">
+
+            <!-- KHỐI 1: HERO TRANG ÂM SẮC & TƯ LIỆU -->
+            <section class="studio-hero">
+                <div class="badge-gold">PHÒNG THU ÂM SỐ & BẢO TÀNG ÂM NHẠC</div>
+                <h1>Âm Sắc Làn Điệu & Tư Liệu Di Sản Then</h1>
+                <p>"Khám phá cấu tạo tinh xảo của Đàn Tính, nghệ thuật phối âm độc đáo từ Chùm Xóc Nhạc, hệ thống làn điệu đặc trưng 11 huyện thị và kho tư liệu xuất bản về nghệ thuật Then Lạng Sơn."</p>
+            </section>
+
+            <!-- KHỐI 2: TRÌNH NGHE ÂM THANH LÀN ĐIỆU (AUDIO STUDIO PLAYER) -->
+            <section style="margin-bottom: var(--section-gap);">
+                <div class="section-subtitle">KHÔNG GIAN THƯỞNG THỨC</div>
+                <h2 class="section-title">Phòng Nghe Âm Sắc Làn Điệu Lạng Sơn</h2>
+
+                <div class="audio-studio-box">
+                    <!-- BÊN TRÁI: KHU VỰC PHÁT ÂM THANH CHÍNH -->
+                    <div class="studio-player-main">
+                        <div class="track-badge">ĐANG PHÁT • TRÀNG ĐỊNH</div>
+                        <h3 class="track-title">Làn Điệu "Khảm Hải" (Trường Ca Vượt Biển)</h3>
+                        <p class="track-artist">Biểu diễn: Nghệ nhân Ưu tú Lạng Sơn • Đàn Tính & Xóc Nhạc</p>
+
+                        <!-- SÓNG ÂM GIẢ LẬP (SOUNDWAVE) -->
+                        <div class="soundwave-container">
+                            <span class="bar bar-1"></span>
+                            <span class="bar bar-2"></span>
+                            <span class="bar bar-3"></span>
+                            <span class="bar bar-4"></span>
+                            <span class="bar bar-5"></span>
+                            <span class="bar bar-6"></span>
+                            <span class="bar bar-7"></span>
+                            <span class="bar bar-8"></span>
+                            <span class="bar bar-9"></span>
+                            <span class="bar bar-10"></span>
+                        </div>
+
+                        <!-- THANH ĐIỀU KHIỂN PLAYBACK -->
+                        <div class="player-controls">
+                            <button class="btn-play-large">&#9658;</button>
+                            <div class="progress-wrap">
+                                <div class="progress-bar" style="width: 45%;"></div>
+                            </div>
+                            <span class="time-display">02:15 / 05:40</span>
+                        </div>
+                    </div>
+
+                    <!-- BÊN PHẢI: DANH SÁCH BÀI HÁT / LÀN ĐIỆU -->
+                    <div class="playlist-wrap">
+                        <div class="playlist-header">DANH SÁCH LÀN ĐIỆU TIÊU BIỂU</div>
+                        <div class="playlist-scroll">
+
+                            <div class="playlist-item active">
+                                <div class="play-icon">&#9658;</div>
+                                <div class="item-info">
+                                    <div class="item-title">Khảm Hải (Vượt biển)</div>
+                                    <div class="item-sub">Vùng Tràng Định • Hát Then Cổ</div>
+                                </div>
+                                <span class="item-time">05:40</span>
+                            </div>
+
+                            <div class="playlist-item">
+                                <div class="play-icon">&#9658;</div>
+                                <div class="item-info">
+                                    <div class="item-title">Pỷ Tẳng (Đi đường)</div>
+                                    <div class="item-sub">Vùng Văn Quan • Nhịp điệu dồn dập</div>
+                                </div>
+                                <span class="item-time">04:12</span>
+                            </div>
+
+                            <div class="playlist-item">
+                                <div class="play-icon">&#9658;</div>
+                                <div class="item-info">
+                                    <div class="item-title">Chắm Xuân Mẩu (Mùa xuân mới)</div>
+                                    <div class="item-sub">Then Lời Mới • Ngợi ca quê hương</div>
+                                </div>
+                                <span class="item-time">03:48</span>
+                            </div>
+
+                            <div class="playlist-item">
+                                <div class="play-icon">&#9658;</div>
+                                <div class="item-info">
+                                    <div class="item-title">Khao Slung (Mừng mừng bản làng)</div>
+                                    <div class="item-sub">Vùng Bình Gia, Bắc Sơn • Âm hưởng vui tươi</div>
+                                </div>
+                                <span class="item-time">04:30</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KHỐI 3: TRIỂN LÃM CẤU TẠO NHẠC CỤ & Y PHỤC (INSTRUMENT ANATOMY) -->
+            <section style="margin-bottom: var(--section-gap);">
+                <div class="section-subtitle">NGHỆ THUẬT CHẾ TÁC</div>
+                <h2 class="section-title">Cấu Tạo Nhạc Cụ & Trang Phục Hát Then</h2>
+
+                <div class="instrument-grid">
+
+                    <!-- ĐÀN TÍNH -->
+                    <div class="ins-card">
+                        <div class="ins-img-box">
+                            <img src="./images/dan_tinh.png" alt="Đàn Tính Tày Nùng">
+                            <span class="ins-badge">NHẠC CỤ CHÍNH</span>
+                        </div>
+                        <div class="ins-body">
+                            <h3>Đàn Tính (Tẩu Tính)</h3>
+                            <p class="ins-desc">Linh hồn âm nhạc của Then. Cần đàn làm bằng gỗ xoan dẻo mịn, bầu đàn từ nửa quả bầu khô chọn lọc, tạo nên âm sắc trong trẻo, trầm hùng.</p>
+                            <ul class="ins-specs">
+                                <li><strong>Bầu đàn:</strong> Quả bầu già khô, đục lỗ thoát âm</li>
+                                <li><strong>Cần đàn:</strong> Gỗ xoan/dâu, dài từ 80 - 90cm</li>
+                                <li><strong>Dây đàn:</strong> 2 hoặc 3 dây tơ ve vuốt mịn</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- CHÙM XÓC NHẠC -->
+                    <div class="ins-card">
+                        <div class="ins-img-box">
+                            <img src="./images/soc_nhac.png" alt="Chùm xóc nhạc">
+                            <span class="ins-badge">NHẠC CỤ GIỮ NHỊP</span>
+                        </div>
+                        <div class="ins-body">
+                            <h3>Chùm Xóc Nhạc (Nhạc Ngựa)</h3>
+                            <p class="ins-desc">Được đúc bằng đồng vàng hoặc đồng đỏ, gồm nhiều chuỗi vòng nhỏ kết nối. Khi rung tạo ra âm thanh rộn rã, mô phỏng tiếng nhạc ngựa trên đường gập ghềnh.</p>
+                            <ul class="ins-specs">
+                                <li><strong>Chất liệu:</strong> Đồng đỏ/đồng vàng cao cấp</li>
+                                <li><strong>Kích thước vòng:</strong> Đường kính 1.5cm - 2cm</li>
+                                <li><strong>Công dụng:</strong> Rung giữ nhịp tiết tấu bài hát</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ÁO CHÀM 5 THÂN -->
+                    <div class="ins-card">
+                        <div class="ins-img-box">
+                            <img src="./images/giao_luu.png" alt="Trang phục Áo chàm">
+                            <span class="ins-badge">Y PHỤC DI SẢN</span>
+                        </div>
+                        <div class="ins-body">
+                            <h3>Trang Phục Áo Chàm 5 Thân</h3>
+                            <p class="ins-desc">Trang phục truyền thống nhuộm chàm tự nhiên của dân tộc Tày - Nùng. May kiểu 5 thân cài cúc nách phải, kết hợp dải tua vải nhiều màu sắc rực rỡ.</p>
+                            <ul class="ins-specs">
+                                <li><strong>Màu sắc:</strong> Xanh chàm ngả đen, gam màu nhã nhặn</li>
+                                <li><strong>Kiểu dáng:</strong> Áo dài 5 thân cài cúc bên nách</li>
+                                <li><strong>Phụ kiện:</strong> Khăn quấn đầu, tua vải hoa văn</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- KHỐI 4: BẢNG PHÂN TÍCH 3 DẠNG GIAI ĐIỆU ÂM NHẠC (MUSICOLOGY ANALYSIS) -->
+            <section style="margin-bottom: var(--section-gap);">
+                <div class="section-subtitle">NGHIÊN CỨU ÂM NHẠC HỌC</div>
+                <h2 class="section-title">Hệ Thống 3 Dạng Giai Điệu Trong Then Lạng Sơn</h2>
+
+                <div class="musicology-grid">
+
+                    <div class="music-type-card">
+                        <div class="type-num">01</div>
+                        <h4>Giai Điệu Hát Nói (Recitative)</h4>
+                        <p class="type-desc">Dạng giai điệu gắn liền với tiếng nói tự nhiên của người Tày - Nùng. Âm thanh lên cao xuống thấp theo thanh điệu ngôn ngữ.</p>
+                        <div class="type-tag-list">
+                            <span>Quãng 2, Quãng 3</span>
+                            <span>Tiết tấu dứt khoát</span>
+                            <span>Dồn dập, khỏe khoắn</span>
+                        </div>
+                    </div>
+
+                    <div class="music-type-card">
+                        <div class="type-num">02</div>
+                        <h4>Giai Điệu Hát Ngâm (Chanting)</h4>
+                        <p class="type-desc">Mang tính chất dàn trải, ngậm ngùi, có nhiều nét luyến láo tinh tế. Rất phù hợp thể hiện nội tâm trút bầu tâm sự trữ tình.</p>
+                        <div class="type-tag-list">
+                            <span>Ngân dài cuối câu</span>
+                            <span>Luyến lướt tự do</span>
+                            <span>Trữ tình, da diết</span>
+                        </div>
+                    </div>
+
+                    <div class="music-type-card">
+                        <div class="type-num">03</div>
+                        <h4>Giai Điệu Tổng Hợp (Combined)</h4>
+                        <p class="type-desc">Sự kết hợp uyển chuyển giữa hát nói và hát ngâm. Cấu trúc giai điệu phát triển độc lập, phân ngắt câu rõ nét và linh hoạt.</p>
+                        <div class="type-tag-list">
+                            <span>Luyến 2-3 âm</span>
+                            <span>Quãng 4, Quãng 5</span>
+                            <span>Nhịp điệu sinh động</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- DÒNG SO SÁNH THEN TÀY & THEN NÙNG -->
+                <div class="compare-box">
+                    <div class="compare-title">💡 Sự Khác Biệt Giữa Then Tày & Then Nùng tại Lạng Sơn</div>
+                    <div class="compare-grid">
+                        <div>
+                            <strong>Then Tày:</strong> Giai điệu mượt mà, từ tốn, giai điệu dàn trải mang đậm chất trữ tình tha thiết của vùng thung lũng sông.
+                        </div>
+                        <div>
+                            <strong>Then Nùng:</strong> Tiết tấu nhanh hơn, khỏe khoắn, dồn dập và linh hoạt hơn ở hầu hết các trích đoạn trình diễn.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KHỐI 5: KHO TƯ LIỆU SÁCH & HỒ SƠ KHOA HỌC (ARCHIVE LIBRARY) -->
+            <section style="margin-bottom: var(--section-gap);">
+                <div class="section-subtitle">THƯ VIỆN ĐIỆN TỬ</div>
+                <h2 class="section-title">Kho Ấn Phẩm & Tài Liệu Nghiên Cứu</h2>
+
+                <div class="grid-3">
+
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-tag">SÁCH XUẤT BẢN (2000)</div>
+                            <div class="card-title">Then Tày - Những Khúc Hát</div>
+                            <div class="card-desc">Tác giả: Triệu Bến • NXB Văn hóa Dân tộc. Tập hợp các khúc hát dân ca Then cổ chọn lọc của cộng đồng Tày Xứ Lạng.</div>
+                            <a href="#" class="card-link" style="margin-top: 12px; display: inline-block;">Đọc bản tóm tắt &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-tag">CÔNG TRÌNH ÂM NHẠC (2004)</div>
+                            <div class="card-title">Âm Nhạc Dân Gian Tày, Nùng, Dao Lạng Sơn</div>
+                            <div class="card-desc">Tác giả: Nông Thị Nhỉnh • Ký âm và phân tích thang âm, điệu thức, cấu tạo Đàn Tính trong nghệ thuật trình diễn.</div>
+                            <a href="#" class="card-link" style="margin-top: 12px; display: inline-block;">Đọc bản tóm tắt &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-tag">HỒ SƠ KHỔNG LỒ (UNESCO 2019)</div>
+                            <div class="card-title">Lý Lịch Di Sản Văn Hóa Phi Vật Thể Hát Then</div>
+                            <div class="card-desc">Sở Văn hóa, Thể thao và Du lịch Lạng Sơn. Tài liệu điều tra kiểm kê 375 nghệ nhân và 65 câu lạc bộ toàn tỉnh.</div>
+                            <a href="#" class="card-link" style="margin-top: 12px; display: inline-block;">Xem hồ sơ di sản &rarr;</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div> <!-- Hết .container -->
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div>
+                <a href="index.html" class="footer-logo">
+                    <img src="./icons/logoThenHub.png" alt="ThenHub Logo">
+                </a>
+                <p>"Nền tảng số hóa, lưu giữ và lan tỏa di sản nghệ thuật Hát Then - Đàn Tính dân tộc Tày, Nùng tỉnh Lạng Sơn."</p>
+                <div class="badge">🏆 UNESCO 2019 • Di sản Văn hóa Phi vật thể</div>
+            </div>
+            <div>
+                <h4>Danh mục</h4>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="disan.html">Di sản Hát Then</a></li>
+                    <li><a href="chuyenthen.html">Chuyện Then</a></li>
+                    <li><a href="tulieu.html">Âm sắc & Tư liệu</a></li>
+                    <li><a href="xulang.html">Then & Xứ Lạng</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Tri thức di sản</h4>
+                <ul>
+                    <li><a href="#">Nhạc cụ Đàn Tính</a></li>
+                    <li><a href="#">Thơ ca & Làn điệu cổ</a></li>
+                    <li><a href="#">Danh sách Nghệ nhân</a></li>
+                    <li><a href="#">Bản đồ 11 Huyện thị</a></li>
+                    <li><a href="#">Đưa Then vào học đường</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Đơn vị đồng hành</h4>
+                <p style="margin-bottom: 12px; opacity: 1;">Sở Văn hóa, Thể thao và Du lịch tỉnh Lạng Sơn</p>
+                <p style="margin-bottom: 12px; opacity: 1;">Email: contact@thenhub.vn</p>
+                <p style="opacity: 1;">Địa chỉ: TP. Lạng Sơn, Tỉnh Lạng Sơn</p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

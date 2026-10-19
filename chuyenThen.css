@@ -1,0 +1,395 @@
+﻿/* ==============================================================
+   1. THỪA HƯỞNG STYLE CHUNG TỪ TRANG CHỦ & TRANG DI SẢN
+   ============================================================== */
+@import url('./style.css');
+
+/* ==============================================================
+   2. BỐ CỤC TẠP CHÍ ĐẶC THÙ CHO TRANG CHUYỆN THEN
+   ============================================================== */
+
+/* Hero Banner dạng Báo Bìa */
+.story-hero {
+    background-color: var(--bg-card);
+    border-left: 5px solid var(--color-gold);
+    border-radius: var(--border-radius);
+    padding: 40px 45px;
+    margin-bottom: var(--section-gap);
+}
+
+.story-hero-badge {
+    color: var(--color-gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.story-hero h1 {
+    font-family: var(--font-title);
+    font-size: 34px;
+    color: var(--color-green);
+    margin-bottom: 14px;
+}
+
+.story-hero-subtitle {
+    font-size: 15px;
+    color: var(--text-gray);
+    line-height: 1.7;
+    max-width: 880px;
+}
+
+/* --------------------------------------------------------------
+   KHỐI FEATURED STORY (1 BÀI VIẾT LỚN + 1 DANH SÁCH FEED BÊN PHẢI)
+   -------------------------------------------------------------- */
+.story-feature-layout {
+    display: flex;
+    gap: 32px;
+    align-items: stretch;
+}
+
+/* Bài viết chính bên trái (62%) */
+.main-story-card {
+    flex: 1.6;
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-story-img-wrap {
+    position: relative;
+    height: 260px;
+}
+
+    .main-story-img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0;
+    }
+
+.story-tag-pill {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    background: var(--color-green);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 12px;
+}
+
+.main-story-body {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+    .main-story-body h3 {
+        font-family: var(--font-title);
+        font-size: 22px;
+        color: var(--color-green);
+        margin-bottom: 6px;
+    }
+
+.story-meta {
+    font-size: 12px;
+    color: var(--color-gold);
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.main-story-body p {
+    font-size: 14px;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* Trích dẫn nổi bật Pull-Quote */
+.pull-quote {
+    background-color: #FAF6F0;
+    border-left: 3px solid var(--color-gold);
+    padding: 14px 18px;
+    margin: 12px 0;
+    font-style: italic;
+    color: var(--color-green);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Feed danh sách bên phải (38%) */
+.story-feed-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.feed-item {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    display: flex;
+    gap: 16px;
+    transition: transform 0.3s ease;
+}
+
+    .feed-item:hover {
+        transform: translateX(5px);
+    }
+
+.feed-num {
+    font-family: var(--font-title);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-gold);
+    line-height: 1;
+}
+
+.feed-content {
+    flex: 1;
+}
+
+.feed-tag {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--color-gold);
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.feed-content h4 {
+    font-size: 15px;
+    color: var(--color-green);
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.feed-content p {
+    font-size: 12px;
+    color: var(--text-gray);
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.feed-link {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-green);
+}
+
+    .feed-link:hover {
+        color: var(--color-gold);
+    }
+
+/* --------------------------------------------------------------
+   KHỐI SONG NGỮ THƠ CA (LYRICS SHOWCASE)
+   -------------------------------------------------------------- */
+.lyrics-showcase-section {
+    background-color: #FAF7F2;
+    border: 1px solid #EAE0D5;
+    border-radius: var(--border-radius);
+    padding: 36px 40px;
+    margin-bottom: var(--section-gap);
+}
+
+.lyrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.lyric-card {
+    background-color: #FFFFFF;
+    border-radius: var(--border-radius);
+    padding: 24px;
+    border-top: 4px solid var(--color-green);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+    .lyric-card.viet-version {
+        border-top-color: var(--color-gold);
+    }
+
+.lang-flag {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-gray);
+    display: block;
+    margin-bottom: 6px;
+}
+
+.lyric-header h4 {
+    font-family: var(--font-title);
+    font-size: 18px;
+    color: var(--color-green);
+    margin-bottom: 16px;
+}
+
+.lyric-body p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.tay-version .lyric-body p {
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* --------------------------------------------------------------
+   KHỐI MAGAZINE (1 BÀI LỚN + 2 BÀI NHỎ XẾP CHỒNG)
+   -------------------------------------------------------------- */
+.magazine-layout {
+    display: flex;
+    gap: 24px;
+}
+
+.mag-big-card {
+    flex: 1.2;
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.mag-big-img-wrap {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background-color: var(--bg-card);
+}
+    .mag-big-img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+.mag-big-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+    .mag-big-content h3 {
+        font-family: var(--font-title);
+        font-size: 20px;
+        color: var(--color-green);
+        margin: 8px 0;
+    }
+
+    .mag-big-content p {
+        font-size: 13px;
+        color: var(--text-gray);
+        line-height: 1.6;
+        margin-bottom: 14px;
+    }
+
+.mag-stacked-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mag-small-card {
+    background-color: var(--bg-card);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    display: flex;
+    gap: 16px;
+    padding: 12px;
+}
+
+    .mag-small-card img {
+        width: 110px;
+        height: 110px;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+.mag-small-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+    .mag-small-content h4 {
+        font-size: 14px;
+        color: var(--color-green);
+        margin: 4px 0;
+        line-height: 1.3;
+    }
+
+    .mag-small-content p {
+        font-size: 12px;
+        color: var(--text-gray);
+        line-height: 1.4;
+        margin-bottom: 6px;
+    }
+
+/* --------------------------------------------------------------
+   KHỐI TRÍCH DẪN NGHỆ NHÂN (WIDE ARTISAN QUOTE)
+   -------------------------------------------------------------- */
+.artisan-quote-section {
+    background-color: var(--color-green);
+    color: #FFFFFF;
+    border-radius: var(--border-radius);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: var(--section-gap);
+}
+
+.quote-avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--color-gold);
+    object-fit: cover;
+}
+
+.quote-text-wrap {
+    position: relative;
+    flex: 1;
+}
+
+.quote-icon {
+    font-family: var(--font-title);
+    font-size: 60px;
+    color: var(--color-gold);
+    position: absolute;
+    top: -25px;
+    left: -20px;
+    opacity: 0.4;
+}
+
+.quote-content {
+    font-size: 16px;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 14px;
+    position: relative;
+    z-index: 1;
+}
+
+.quote-author {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-gold);
+}
+
+.quote-sub {
+    font-size: 12px;
+    opacity: 0.8;
+}
