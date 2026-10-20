@@ -1,11 +1,4 @@
-﻿/* ==============================================================
-   1. THỪA HƯỞNG STYLE CHUNG TỪ TRANG CHỦ & TRANG DI SẢN
-   ============================================================== */
-@import url('./style.css');
-
-/* ==============================================================
-   2. BỐ CỤC TẠP CHÍ ĐẶC THÙ CHO TRANG CHUYỆN THEN
-   ============================================================== */
+﻿@import url('./style.css');
 
 /* Hero Banner dạng Báo Bìa */
 .story-hero {
@@ -38,9 +31,7 @@
     max-width: 880px;
 }
 
-/* --------------------------------------------------------------
-   KHỐI FEATURED STORY (1 BÀI VIẾT LỚN + 1 DANH SÁCH FEED BÊN PHẢI)
-   -------------------------------------------------------------- */
+/* KHỐI FEATURED STORY (1 BÀI VIẾT LỚN + 1 DANH SÁCH FEED BÊN PHẢI) */
 .story-feature-layout {
     display: flex;
     gap: 32px;
@@ -188,9 +179,7 @@
         color: var(--color-gold);
     }
 
-/* --------------------------------------------------------------
-   KHỐI SONG NGỮ THƠ CA (LYRICS SHOWCASE)
-   -------------------------------------------------------------- */
+/* KHỐI SONG NGỮ THƠ CA (LYRICS SHOWCASE) */
 .lyrics-showcase-section {
     background-color: #FAF7F2;
     border: 1px solid #EAE0D5;
@@ -244,9 +233,7 @@
     font-weight: 500;
 }
 
-/* --------------------------------------------------------------
-   KHỐI MAGAZINE (1 BÀI LỚN + 2 BÀI NHỎ XẾP CHỒNG)
-   -------------------------------------------------------------- */
+/* KHỐI MAGAZINE (1 BÀI LỚN + 2 BÀI NHỎ XẾP CHỒNG)*/
 .magazine-layout {
     display: flex;
     gap: 24px;
@@ -337,9 +324,7 @@
         margin-bottom: 6px;
     }
 
-/* --------------------------------------------------------------
-   KHỐI TRÍCH DẪN NGHỆ NHÂN (WIDE ARTISAN QUOTE)
-   -------------------------------------------------------------- */
+/* KHỐI TRÍCH DẪN NGHỆ NHÂN (WIDE ARTISAN QUOTE) */
 .artisan-quote-section {
     background-color: var(--color-green);
     color: #FFFFFF;

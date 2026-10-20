@@ -1,13 +1,6 @@
-﻿/* ==============================================================
-   THỪA HƯỞNG TOÀN BỘ CSS TỪ TRANG CHỦ
-   ============================================================== */
-@import url('./style.css');
+﻿@import url('./style.css');
 
-/* ==============================================================
-   STYLING RIÊNG CHO TRANG DI SẢN HÁT THEN
-   ============================================================== */
-
-/* 1. HERO BANNER TRANG DI SẢN (Nền kem nhạt chuẩn Figma) */
+/* 1. HERO BANNER TRANG DI SẢN */
 .hero-disan {
     background-color: var(--bg-card);
     border: 1px solid #EAE0D5;

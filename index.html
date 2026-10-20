@@ -8,7 +8,8 @@
 </head>
 <body>
     <!-- SIDEBAR -->
-    <aside class="sidebar">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebarNav">
         <a href="index.html" class="logo">
             <img src="./icons/logoThenHub.png" alt="ThenHub Logo">
         </a>
@@ -26,25 +27,38 @@
 
         <!-- KHỐI 1: HEADER -->
         <header class="header">
+            <!-- 1. NÚT 3 GẠCH (Chỉ xuất hiện trên màn hình điện thoại) -->
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Mở menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <div class="header-links">
                 <a href="#" style="color: var(--color-gold); font-style: italic;">Hơi Thở Biên Cương</a>
             </div>
+
             <div style="display: flex; align-items: center; gap: 16px;">
-                <div class="header-links">
+                <!-- 2. Thêm class "desktop-only" để ẩn 2 link này khi vào bằng điện thoại -->
+                <div class="header-links desktop-only">
                     <a href="#">Về ThenHub</a>
                     <a href="#">Liên hệ</a>
                 </div>
+
                 <div class="search-bar">
                     <img src="./icons/icon_timkiem.png" alt="Search" style="width: 18px; height: 18px;">
                     <input type="text" placeholder="Tìm kiếm bài viết, nghệ nhân...">
                 </div>
+
                 <button style="background: none; border: 1px solid #ccc; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
                     <img src="./icons/icon_loa.png" alt="Audio" style="width: 20px; height: 20px;">
                 </button>
             </div>
         </header>
 
+        <!-- CONTAINER CHỨA TOÀN BỘ NỘI DUNG TRANG CHỦ -->
         <div class="container">
+
             <!-- KHỐI 2: HERO BANNER -->
             <section class="hero-banner" style="background-image: linear-gradient(to right, rgba(15, 37, 27, 0.88) 0%, rgba(31, 75, 55, 0.45) 60%, rgba(0, 0, 0, 0.1) 100%), url('./images/anh_nen_banner.png');">
                 <h1>ThenHub - Hơi Thở Biên Cương</h1>
@@ -241,7 +255,7 @@
                 <p>"Mỗi sự đóng góp và sẻ chia của bạn là một gạch nối bền vững giúp bảo tồn không gian diễn xướng dân gian, tôn vinh những người giữ lửa..."</p>
             </section>
 
-        </div> <!-- Hết .container -->
+        </div> 
         <!-- KHỐI 9: FOOTER -->
         <footer class="footer">
             <div>
@@ -279,5 +293,26 @@
             </div>
         </footer>
     </main>
+
+    <!-- JAVASCRIPT ĐIỀU KHIỂN MENU 3 GẠCH DI ĐỘNG -->
+    <script>
+        const mobileToggle = document.getElementById('mobileToggle');
+        const sidebarNav = document.getElementById('sidebarNav');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+        if (mobileToggle && sidebarNav && sidebarOverlay) {
+            mobileToggle.addEventListener('click', () => {
+                sidebarNav.classList.toggle('active');
+                sidebarOverlay.classList.toggle('active');
+                mobileToggle.classList.toggle('open');
+            });
+
+            sidebarOverlay.addEventListener('click', () => {
+                sidebarNav.classList.remove('active');
+                sidebarOverlay.classList.remove('active');
+                mobileToggle.classList.remove('open');
+            });
+        }
+    </script>
 </body>
 </html>
