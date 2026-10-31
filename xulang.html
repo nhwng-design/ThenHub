@@ -7,6 +7,7 @@
     <!-- Kết nối file CSS dùng chung và file CSS riêng của trang Xứ Lạng -->
     <link rel="stylesheet" href="./style.css?v=3" />
     <link rel="stylesheet" href="./xulang.css?v=3" />
+    <link rel="stylesheet" href="./tour-modal.css?v=1.0" />
 </head>
 <body>
     <!-- SIDEBAR -->
@@ -350,23 +351,25 @@
     </main>
     <!-- JAVASCRIPT ĐIỀU KHIỂN MENU 3 GẠCH DI ĐỘNG -->
     <script>
-    const mobileToggle = document.getElementById('mobileToggle');
-    const sidebarNav = document.getElementById('sidebarNav');
-    const sidebarOverlay = document.getElementById('sidebarOverlay');
+        const mobileToggle = document.getElementById('mobileToggle');
+        const sidebarNav = document.getElementById('sidebarNav');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
 
-    if (mobileToggle && sidebarNav && sidebarOverlay) {
-        mobileToggle.addEventListener('click', () => {
-            sidebarNav.classList.toggle('active');
-            sidebarOverlay.classList.toggle('active');
-            mobileToggle.classList.toggle('open');
-        });
+        if (mobileToggle && sidebarNav && sidebarOverlay) {
+            mobileToggle.addEventListener('click', () => {
+                sidebarNav.classList.toggle('active');
+                sidebarOverlay.classList.toggle('active');
+                mobileToggle.classList.toggle('open');
+            });
 
-        sidebarOverlay.addEventListener('click', () => {
-            sidebarNav.classList.remove('active');
-            sidebarOverlay.classList.remove('active');
-            mobileToggle.classList.remove('open');
-        });
-    }
+            sidebarOverlay.addEventListener('click', () => {
+                sidebarNav.classList.remove('active');
+                sidebarOverlay.classList.remove('active');
+                mobileToggle.classList.remove('open');
+            });
+        }
     </script>
+    <script src="./tour-modal.js?v=1.0"></script>
+    <script src="./modal.js"></script>
 </body>
 </html>

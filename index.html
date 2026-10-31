@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ThenHub - Hơi Thở Biên Cương</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./tour-modal.css?v=1.0" />
 </head>
 <body>
     <!-- SIDEBAR -->
@@ -89,8 +90,8 @@
                     <a href="#" class="link-arrow" style="font-size: 14px;">Xem thư viện &rarr;</a>
                 </div>
                 <div class="grid-3">
-
-                    <a href="#" class="card">
+                    <!-- VIDEO 1: Điệu Then Khảm Hải -->
+                    <a href="javascript:void(0)" class="card video-card" data-video="https://www.youtube.com/embed/5SCZGg4-Xt4?autoplay=1">
                         <div class="card-thumb">
                             <img src="./images/Then_vuot_bien.png" alt="Điệu Then">
                             <div class="play-btn"></div>
@@ -102,7 +103,8 @@
                         </div>
                     </a>
 
-                    <a href="#" class="card">
+                    <!-- VIDEO 2: Nghệ thuật gảy Đàn Tính -->
+                    <a href="javascript:void(0)" class="card video-card" data-video="https://www.youtube.com/embed/WP_4MLCgbGE?autoplay=1">
                         <div class="card-thumb">
                             <img src="./images/dan_tinh.png" alt="Đàn Tính">
                             <div class="play-btn"></div>
@@ -114,7 +116,8 @@
                         </div>
                     </a>
 
-                    <a href="#" class="card">
+                    <!-- VIDEO 3: Bài Then Chắm Xuân Mẩu -->
+                    <a href="javascript:void(0)" class="card video-card" data-video="https://www.youtube.com/embed/Cdf8cndd__c?autoplay=1">
                         <div class="card-thumb">
                             <img src="./images/hat_then.png" alt="Xuân Mới">
                             <div class="play-btn"></div>
@@ -125,7 +128,6 @@
                             <div class="card-desc">Lạng Sơn • 4:45</div>
                         </div>
                     </a>
-
                 </div>
             </section>
 
@@ -255,7 +257,7 @@
                 <p>"Mỗi sự đóng góp và sẻ chia của bạn là một gạch nối bền vững giúp bảo tồn không gian diễn xướng dân gian, tôn vinh những người giữ lửa..."</p>
             </section>
 
-        </div> 
+        </div>
         <!-- KHỐI 9: FOOTER -->
         <footer class="footer">
             <div>
@@ -314,5 +316,58 @@
             });
         }
     </script>
+    <script src="./tour-modal.js?v=1.0"></script>
+    <!-- POPUP MODAL XEM VIDEO (KHÓA Z-INDEX 999999 ĐỂ CHẮC CHẮN HIỆN NỔI ĐÈ TOÀN TRANG) -->
+    <div id="videoModal" style="position: fixed !important; top: 0 !important; left: 0 !important; width: 100vw !important; height: 100vh !important; background-color: rgba(0, 0, 0, 0.9) !important; backdrop-filter: blur(6px) !important; z-index: 999999 !important; display: none; justify-content: center !important; align-items: center !important; padding: 20px !important; box-sizing: border-box !important;">
+
+        <div style="position: relative !important; width: 100% !important; max-width: 860px !important; background: #000000 !important; border-radius: 12px !important; box-shadow: 0 20px 50px rgba(0,0,0,0.8) !important;">
+
+            <!-- NÚT ĐÓNG X -->
+            <button id="closeVideoBtn" type="button" style="position: absolute !important; top: -45px !important; right: 0 !important; background: none !important; border: none !important; color: #FFFFFF !important; font-size: 36px !important; cursor: pointer !important; line-height: 1 !important; z-index: 10 !important;">&times;</button>
+
+            <!-- KHUNG PHÁT VIDEO CHUẨN TỶ LỆ 16:9 -->
+            <div style="position: relative !important; padding-bottom: 56.25% !important; height: 0 !important; overflow: hidden !important; border-radius: 12px !important;">
+                <iframe id="videoIframe" src="" title="Video Hát Then" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; border: 0 !important;"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT XỬ LÝ PHÁT VÀ TẮT VIDEO KHÔNG BỊ TRÙNG ÂM THANH -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const videoCards = document.querySelectorAll(".video-card");
+            const videoModal = document.getElementById("videoModal");
+            const videoIframe = document.getElementById("videoIframe");
+            const closeVideoBtn = document.getElementById("closeVideoBtn");
+
+            // Bấm vào card bất kỳ -> Lấy đúng link video của card đó & Bật Popup
+            videoCards.forEach(card => {
+                card.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const videoUrl = this.getAttribute("data-video");
+                    if (videoUrl && videoIframe && videoModal) {
+                        videoIframe.src = videoUrl;
+                        videoModal.style.display = "flex";
+                    }
+                });
+            });
+
+            // Tắt Popup và dừng tiếng ngay lập tức
+            function stopAndCloseVideo() {
+                if (videoModal && videoIframe) {
+                    videoModal.style.display = "none";
+                    videoIframe.src = ""; // Xóa src để ngắt nhạc ngay lập tức
+                }
+            }
+
+            if (closeVideoBtn) closeVideoBtn.addEventListener("click", stopAndCloseVideo);
+            if (videoModal) {
+                videoModal.addEventListener("click", function (e) {
+                    if (e.target === videoModal) stopAndCloseVideo();
+                });
+            }
+        });
+    </script>
+    <script src="./modal.js"></script>
 </body>
 </html>

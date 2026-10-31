@@ -6,7 +6,8 @@
     <title>Âm sắc & Tư liệu - ThenHub</title>
     <!-- Kết nối file CSS riêng của Trang 4 -->
     <link rel="stylesheet" href="./tulieu.css" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./tulieu.css?v=2.0" />
+    <link rel="stylesheet" href="./tour-modal.css?v=1.0" />
 </head>
 <body>
     <!-- SIDEBAR -->
@@ -72,15 +73,18 @@
                 <div class="section-subtitle">KHÔNG GIAN THƯỞNG THỨC</div>
                 <h2 class="section-title">Phòng Nghe Âm Sắc Làn Điệu Lạng Sơn</h2>
 
+                <!-- THẺ AUDIO: ĐỔI SRC THÀNH BÀI ĐẦU TIÊN -->
+                <audio id="audioEngine" src="./audio/kham_hai.mp3" preload="metadata"></audio>
+
                 <div class="audio-studio-box">
                     <!-- BÊN TRÁI: KHU VỰC PHÁT ÂM THANH CHÍNH -->
                     <div class="studio-player-main">
-                        <div class="track-badge">ĐANG PHÁT • TRÀNG ĐỊNH</div>
-                        <h3 class="track-title">Làn Điệu "Khảm Hải" (Trường Ca Vượt Biển)</h3>
-                        <p class="track-artist">Biểu diễn: Nghệ nhân Ưu tú Lạng Sơn • Đàn Tính & Xóc Nhạc</p>
+                        <div class="track-badge" id="playerBadge">ĐANG PHÁT • TRÀNG ĐỊNH</div>
+                        <h3 class="track-title" id="playerTitle">Làn Điệu "Khảm Hải" (Trường Ca Vượt Biển)</h3>
+                        <p class="track-artist" id="playerArtist">Biểu diễn: Nghệ nhân Ưu tú Lạng Sơn • Đàn Tính & Xóc Nhạc</p>
 
-                        <!-- SÓNG ÂM GIẢ LẬP (SOUNDWAVE) -->
-                        <div class="soundwave-container">
+                        <!-- SÓNG ÂM GIẢ LẬP -->
+                        <div class="soundwave-container" id="soundwave">
                             <span class="bar bar-1"></span>
                             <span class="bar bar-2"></span>
                             <span class="bar bar-3"></span>
@@ -93,22 +97,28 @@
                             <span class="bar bar-10"></span>
                         </div>
 
-                        <!-- THANH ĐIỀU KHIỂN PLAYBACK -->
+                        <!-- THANH ĐIỀU KHIỂN & TUA NHẠC -->
                         <div class="player-controls">
-                            <button class="btn-play-large">&#9658;</button>
+                            <button class="btn-play-large" id="playPauseBtn" type="button" aria-label="Phát / Tạm dừng">&#9658;</button>
                             <div class="progress-wrap">
-                                <div class="progress-bar" style="width: 45%;"></div>
+                                <input type="range" id="seekSlider" class="seek-slider" value="0" min="0" max="100" step="0.1">
+                                <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
                             </div>
-                            <span class="time-display">02:15 / 05:40</span>
+                            <span class="time-display" id="timeDisplay">00:00 / 00:00</span>
                         </div>
                     </div>
 
-                    <!-- BÊN PHẢI: DANH SÁCH BÀI HÁT / LÀN ĐIỆU -->
+                    <!-- BÊN PHẢI: DANH SÁCH BÀI HÁT (CẬP NHẬT 4 DATA-SRC THEO TÊN FILE MP3 BẠN TẢI) -->
                     <div class="playlist-wrap">
                         <div class="playlist-header">DANH SÁCH LÀN ĐIỆU TIÊU BIỂU</div>
-                        <div class="playlist-scroll">
+                        <div class="playlist-scroll" id="playlistScroll">
 
-                            <div class="playlist-item active">
+                            <!-- BÀI 1: kham_hai.mp3 -->
+                            <div class="playlist-item active"
+                                 data-src="./audio/kham_hai.mp3"
+                                 data-badge="ĐANG PHÁT • TRÀNG ĐỊNH"
+                                 data-title='Làn Điệu "Khảm Hải" (Trường Ca Vượt Biển)'
+                                 data-artist="Biểu diễn: Nghệ nhân Ưu tú Lạng Sơn • Đàn Tính & Xóc Nhạc">
                                 <div class="play-icon">&#9658;</div>
                                 <div class="item-info">
                                     <div class="item-title">Khảm Hải (Vượt biển)</div>
@@ -117,7 +127,12 @@
                                 <span class="item-time">05:40</span>
                             </div>
 
-                            <div class="playlist-item">
+                            <!-- BÀI 2: di_duong.mp3 -->
+                            <div class="playlist-item"
+                                 data-src="./audio/di_duong.mp3"
+                                 data-badge="ĐANG PHÁT • VĂN QUAN"
+                                 data-title='Làn Điệu "Pỷ Tẳng" (Đi Đường)'
+                                 data-artist="Biểu diễn: CLB Hát Then Văn Quan • Đàn Tính & Nhạc Xóc">
                                 <div class="play-icon">&#9658;</div>
                                 <div class="item-info">
                                     <div class="item-title">Pỷ Tẳng (Đi đường)</div>
@@ -126,7 +141,12 @@
                                 <span class="item-time">04:12</span>
                             </div>
 
-                            <div class="playlist-item">
+                            <!-- BÀI 3: mung_xuan_moi.mp3 -->
+                            <div class="playlist-item"
+                                 data-src="./audio/mung_xuan_moi.mp3"
+                                 data-badge="ĐANG PHÁT • THEN LỜI MỚI"
+                                 data-title='Bài Then: "Chắm Xuân Mẩu" (Mùa Xuân Mới)'
+                                 data-artist="Biểu diễn: Tốp ca Nghệ nhân Cao Lộc • Đàn Tính">
                                 <div class="play-icon">&#9658;</div>
                                 <div class="item-info">
                                     <div class="item-title">Chắm Xuân Mẩu (Mùa xuân mới)</div>
@@ -135,7 +155,12 @@
                                 <span class="item-time">03:48</span>
                             </div>
 
-                            <div class="playlist-item">
+                            <!-- BÀI 4: ban_lang.mp3 -->
+                            <div class="playlist-item"
+                                 data-src="./audio/ban_lang.mp3"
+                                 data-badge="ĐANG PHÁT • BÌNH GIA"
+                                 data-title='Làn Điệu "Khao Slung" (Mừng Mừng Bản Làng)'
+                                 data-artist="Biểu diễn: Nghệ nhân Mỗ Thị Kịt • Hát Then Tày">
                                 <div class="play-icon">&#9658;</div>
                                 <div class="item-info">
                                     <div class="item-title">Khao Slung (Mừng mừng bản làng)</div>
@@ -143,7 +168,6 @@
                                 </div>
                                 <span class="item-time">04:30</span>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -303,7 +327,7 @@
                 </div>
             </section>
 
-        </div> 
+        </div>
         <!-- FOOTER -->
         <footer class="footer">
             <div>
@@ -343,23 +367,122 @@
     </main>
     <!-- JAVASCRIPT ĐIỀU KHIỂN MENU 3 GẠCH DI ĐỘNG -->
     <script>
-    const mobileToggle = document.getElementById('mobileToggle');
-    const sidebarNav = document.getElementById('sidebarNav');
-    const sidebarOverlay = document.getElementById('sidebarOverlay');
+        const mobileToggle = document.getElementById('mobileToggle');
+        const sidebarNav = document.getElementById('sidebarNav');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
 
-    if (mobileToggle && sidebarNav && sidebarOverlay) {
-        mobileToggle.addEventListener('click', () => {
-            sidebarNav.classList.toggle('active');
-            sidebarOverlay.classList.toggle('active');
-            mobileToggle.classList.toggle('open');
-        });
+        if (mobileToggle && sidebarNav && sidebarOverlay) {
+            mobileToggle.addEventListener('click', () => {
+                sidebarNav.classList.toggle('active');
+                sidebarOverlay.classList.toggle('active');
+                mobileToggle.classList.toggle('open');
+            });
 
-        sidebarOverlay.addEventListener('click', () => {
-            sidebarNav.classList.remove('active');
-            sidebarOverlay.classList.remove('active');
-            mobileToggle.classList.remove('open');
-        });
-    }
+            sidebarOverlay.addEventListener('click', () => {
+                sidebarNav.classList.remove('active');
+                sidebarOverlay.classList.remove('active');
+                mobileToggle.classList.remove('open');
+            });
+        }
     </script>
+    <script src="./tour-modal.js?v=1.0"></script>
+    <!-- JAVASCRIPT XỬ LÝ TRÌNH NGHE NHẠC MP3 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const audio = document.getElementById("audioEngine");
+            const playPauseBtn = document.getElementById("playPauseBtn");
+            const seekSlider = document.getElementById("seekSlider");
+            const progressBar = document.getElementById("progressBar");
+            const timeDisplay = document.getElementById("timeDisplay");
+            const soundwave = document.getElementById("soundwave");
+
+            const playerBadge = document.getElementById("playerBadge");
+            const playerTitle = document.getElementById("playerTitle");
+            const playerArtist = document.getElementById("playerArtist");
+            const playlistItems = document.querySelectorAll(".playlist-item");
+
+            // Định dạng giây thành mm:ss
+            function formatTime(seconds) {
+                if (isNaN(seconds)) return "00:00";
+                const mins = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${mins < 10 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
+            }
+
+            // Bật / Tạm dừng Phát Nhạc
+            function togglePlay() {
+                if (audio.paused) {
+                    audio.play().then(() => {
+                        playPauseBtn.innerHTML = "&#10074;&#10074;"; // Chuyển biểu tượng Pause
+                        soundwave.classList.add("playing");
+                    }).catch(err => {
+                        console.log("Cần thêm file mp3 vào thư mục project để phát nhạc:", err);
+                    });
+                } else {
+                    audio.pause();
+                    playPauseBtn.innerHTML = "&#9658;"; // Chuyển biểu tượng Play
+                    soundwave.classList.remove("playing");
+                }
+            }
+
+            if (playPauseBtn) playPauseBtn.addEventListener("click", togglePlay);
+
+            // Cập nhật thanh tiến trình và thời gian chạy
+            audio.addEventListener("timeupdate", function () {
+                if (!isNaN(audio.duration) && audio.duration > 0) {
+                    const progressPercent = (audio.currentTime / audio.duration) * 100;
+                    seekSlider.value = progressPercent;
+                    progressBar.style.width = progressPercent + "%";
+                    timeDisplay.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+                }
+            });
+
+            // Khi kết thúc bài hát
+            audio.addEventListener("ended", function () {
+                playPauseBtn.innerHTML = "&#9658;";
+                soundwave.classList.remove("playing");
+                progressBar.style.width = "0%";
+                seekSlider.value = 0;
+            });
+
+            // Tua nhạc khi kéo slider
+            seekSlider.addEventListener("input", function () {
+                if (!isNaN(audio.duration)) {
+                    const seekTo = (seekSlider.value / 100) * audio.duration;
+                    audio.currentTime = seekTo;
+                    progressBar.style.width = seekSlider.value + "%";
+                }
+            });
+
+            // Chọn bài hát từ danh sách cột bên phải
+            playlistItems.forEach(item => {
+                item.addEventListener("click", function () {
+                    playlistItems.forEach(i => i.classList.remove("active"));
+                    this.classList.add("active");
+
+                    const src = this.getAttribute("data-src");
+                    const badge = this.getAttribute("data-badge");
+                    const title = this.getAttribute("data-title");
+                    const artist = this.getAttribute("data-artist");
+
+                    if (badge) playerBadge.textContent = badge;
+                    if (title) playerTitle.textContent = title;
+                    if (artist) playerArtist.textContent = artist;
+
+                    if (src) {
+                        audio.src = src;
+                        audio.currentTime = 0;
+                        audio.play().then(() => {
+                            playPauseBtn.innerHTML = "&#10074;&#10074;";
+                            soundwave.classList.add("playing");
+                        }).catch(() => {
+                            playPauseBtn.innerHTML = "&#9658;";
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="./modal.js"></script>
 </body>
 </html>

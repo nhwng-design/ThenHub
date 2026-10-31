@@ -66,6 +66,10 @@
         background-color: var(--color-gold);
         border-radius: 3px;
         animation: soundwave 1.2s infinite ease-in-out alternate;
+        animation-play-state: paused; 
+    }
+    .soundwave-container.playing .bar {
+        animation-play-state: running; 
     }
 
 .bar-1 {
@@ -154,18 +158,71 @@
         transform: scale(1.08);
     }
 
+/* THANH TIẾN TRÌNH & TUA NHẠC (CLEAN CSS) */
+
+/* Khung nền chứa thanh xám */
 .progress-wrap {
+    position: relative;
     flex: 1;
-    height: 6px;
-    background-color: rgba(255,255,255,0.2);
-    border-radius: 3px;
-    overflow: hidden;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
 }
 
+/* Thanh màu vàng đại diện nhạc đang chạy */
 .progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
+    width: 0%;
     background-color: var(--color-gold);
+    border-radius: 4px;
+    pointer-events: none;
+    transition: width 0.1s linear;
+    z-index: 1;
 }
+
+/* Thanh kéo tua chìm phủ kín 100% chiều dài */
+.seek-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+    /* Triệt tiêu đường chạy track của Webkit */
+    .seek-slider::-webkit-slider-runnable-track {
+        -webkit-appearance: none;
+        background: transparent;
+        height: 100%;
+        border: none;
+    }
+
+    /* Nút tròn trắng kéo tua */
+    .seek-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 14px;
+        height: 14px;
+        margin-top: -3px;
+        border-radius: 50%;
+        background: #FFFFFF;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+    }
 
 .time-display {
     font-size: 12px;

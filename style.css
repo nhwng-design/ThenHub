@@ -625,6 +625,186 @@ h1, h2, h3, h4, .section-title {
     font-weight: bold;
     display: inline-block;
 }
+/* ==========================================
+   POPUP MODAL XEM VIDEO
+   ========================================== */
+.video-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(6px);
+    z-index: 100000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+    .video-modal-overlay.active {
+        display: flex;
+    }
+
+.video-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 860px;
+    background-color: #000000;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.video-close-btn {
+    position: absolute;
+    top: -42px;
+    right: 0;
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 36px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Tỷ lệ màn hình chuẩn 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+    .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+/* ==========================================
+   CSS POPUP MODAL VỀ THENHUB & LIÊN HỆ (CHUNG)
+   ========================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+    .modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+.modal-box {
+    background: #FFFFFF;
+    width: 90%;
+    max-width: 520px;
+    border-radius: 12px;
+    padding: 28px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-box {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.modal-header {
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1A3E2E;
+    margin-bottom: 14px;
+    border-bottom: 2px solid #C68C32;
+    padding-bottom: 8px;
+}
+
+.modal-body {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.modal-tags {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+    .modal-tags span {
+        background: #F4EFE6;
+        color: #1A3E2E;
+        font-size: 11px;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-weight: 600;
+    }
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #DDD;
+        border-radius: 6px;
+        font-size: 13px;
+        box-sizing: border-box;
+    }
+
+.btn-submit {
+    background: #1A3E2E;
+    color: #FFF;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+    .btn-submit:hover {
+        background: #C68C32;
+    }
+
+.contact-direct {
+    margin-top: 14px;
+    text-align: center;
+    color: #777;
+}
 
 /* RESPONSIVE MOBILE & TABLET (CẤU HÌNH CHO ĐIỆN THOẠI & MÁY TÍNH BẢNG) */
 /* Nút 3 gạch mặc định ẩn trên máy tính */
@@ -846,3 +1026,4 @@ h1, h2, h3, h4, .section-title {
         margin: 0 auto 16px auto;
     }
 }
+

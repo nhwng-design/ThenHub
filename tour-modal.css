@@ -1,0 +1,156 @@
+﻿/* ==========================================
+   NÚT ĐẶT TOUR NỔI (FLOATING BUTTON)
+   ========================================== */
+.floating-tour-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    background-color: #C68C32;
+    color: #FFFFFF;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 50px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+    .floating-tour-btn:hover {
+        background-color: #b07b28;
+        transform: translateY(-4px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    }
+
+/* ==========================================
+   POPUP MODAL FORM
+   ========================================== */
+.tour-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(26, 43, 35, 0.75);
+    backdrop-filter: blur(4px);
+    z-index: 10000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+    .tour-modal-overlay.active {
+        display: flex;
+    }
+
+.tour-modal-content {
+    background-color: #F8F4EC;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 16px;
+    padding: 32px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    border: 1px solid #E8E2D5;
+    box-sizing: border-box;
+    animation: tourModalFadeIn 0.3s ease;
+}
+
+@keyframes tourModalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #1F4B37;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-header h3 {
+    font-family: 'Playfair Display', serif;
+    color: #1F4B37;
+    font-size: 22px;
+    margin: 0 0 6px 0;
+}
+
+.modal-header p {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: #5A6E63;
+    font-size: 13px;
+    margin: 0 0 20px 0;
+    line-height: 1.4;
+}
+
+.form-group {
+    margin-bottom: 14px;
+    text-align: left;
+}
+
+    .form-group label {
+        display: block;
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        color: #1F4B37;
+        margin-bottom: 4px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #D2C8B8;
+        border-radius: 8px;
+        background-color: #FFFFFF;
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-size: 14px;
+        color: #1A2B23;
+        outline: none;
+        box-sizing: border-box;
+    }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #C68C32;
+        }
+
+.submit-tour-btn {
+    width: 100%;
+    background-color: #1F4B37;
+    color: #FFFFFF;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    margin-top: 8px;
+}
+
+    .submit-tour-btn:hover {
+        background-color: #163829;
+    }

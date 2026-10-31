@@ -67,6 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="audio\ban_lang.mp3" />
+    <Content Include="audio\di_duong.mp3" />
+    <Content Include="audio\kham_hai.mp3" />
+    <Content Include="audio\mung_xuan_moi.mp3" />
     <Content Include="chuyenthen.css" />
     <Content Include="chuyenthen.html" />
     <Content Include="disan.css" />
@@ -103,7 +107,10 @@
     <Content Include="images\tho_ca.png" />
     <Content Include="images\truyen_day_hat_then.png" />
     <Content Include="index.html" />
+    <Content Include="modal.js" />
     <Content Include="style.css" />
+    <Content Include="tour-modal.css" />
+    <Content Include="tour-modal.js" />
     <Content Include="tulieu.css" />
     <Content Include="tulieu.html" />
     <Content Include="Web.config" />
